@@ -1,22 +1,15 @@
-module.exports = function (app) {
+var fileReader = require('../fileReader');
 
-  var places = [
-    {
-      name: 'Home',
-      address: 'Guadalajara'
-    },
-    {
-      name: 'ITESM',
-      address: 'Zapopan'
-    }
-  ];
+module.exports = function (app) {
 
   app.get('/', function (req, res) {
     res.send('Success');
   });
 
   app.get('/api/places', function (req, res) {
-    res.send(JSON.stringify(places)); 
+    fileReader.readFromFile('./data/places.json', function (err, len, buffer) {
+      res.send(buffer.toString('utf8', 0, len)); 
+    });
   });
 
   app.get('/api/places/:id', function (req, res) {
