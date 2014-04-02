@@ -13,7 +13,14 @@ module.exports = function (app) {
   });
 
   app.get('/api/places/:id', function (req, res) {
-    var placeId = req.params.id;
-    res.send(JSON.stringify(places[placeId]));
+    var placeId = req.params.id,
+        places;
+    
+    fileReader.readFromFile('./data/places.json', function (err, len, buffer) {
+      places = JSON.parse(buffer.toString('utf8', 0, len)).places;
+
+      res.send(JSON.stringify(places[placeId]));
+    });
+
   });
 };
