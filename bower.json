@@ -1,0 +1,27 @@
+{
+  "name": "hfbc-workshop",
+  "main": "public/index.html",
+  "version": "0.1.0",
+  "authors": [
+    "Javier Hernandez <jhernandez@ooyala.com>"
+  ],
+  "description": "AngularJS Workshop",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/HzJavier/hfbc-workshop-starter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "angular": "~1.3.0",
+    "angular-route": "~1.3.0",
+    "holderjs": "~2.3.1"
+  }
+}
