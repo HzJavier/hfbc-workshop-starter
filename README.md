@@ -28,3 +28,11 @@ node index.js
 ```
 
 Now you can go to your browser and navigate to http://localhost:5000/
+
+## Installing packages with Bower
+
+To install the web packages, run the following script
+
+```shell
+bower install
+```
