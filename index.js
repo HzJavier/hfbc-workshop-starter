@@ -3,6 +3,11 @@ var express = require('express'),
     app = express(),
     routes;
 
+app.configure(function () {
+  console.log('Configuring Express');
+  app.use(express.static(__dirname + '/public'));
+});
+
 app.use(express.logger());
 
 routes = require('./routes')(app);

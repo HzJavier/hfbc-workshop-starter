@@ -3,7 +3,7 @@ var fileReader = require('../fileReader');
 module.exports = function (app) {
 
   app.get('/', function (req, res) {
-    res.send('Success');
+    res.send('Hack For Big Choices');
   });
 
   app.get('/api/places', function (req, res) {
